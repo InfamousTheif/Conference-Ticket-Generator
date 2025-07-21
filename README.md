@@ -158,5 +158,5 @@ function imgHandler(file){
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
+- Website - [InfamousTheif](https://www.your-site.com)
 - Frontend Mentor - [@InfamousTheif](https://www.frontendmentor.io/profile/InfamousTheif)
