@@ -145,7 +145,7 @@ function generateHandler(){
 
 function imgButtonsHandler(){
   removeButton.addEventListener('click', () => {
-    imgOutput.src = "/assets/images/icon-upload.svg";
+    imgOutput.src = "./assets/images/icon-upload.svg";
     fileInput.style.pointerEvents = 'auto';
     stepsText.style.display = 'flex'
     buttonsWrapper.classList.remove('show')
