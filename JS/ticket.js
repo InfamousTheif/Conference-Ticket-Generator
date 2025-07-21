@@ -17,7 +17,7 @@ headerName.innerHTML = `${ticketArray[1]}`
 dateWrapper.innerHTML = `${date} / ${timezoneName}`
 userName.innerHTML = `${ticketArray[1]}`;
 userImg.src = ticketArray[0]
-gitInfo.innerHTML = `<img src="/assets/images/icon-github.svg">
+gitInfo.innerHTML = `<img src="./assets/images/icon-github.svg">
                      ${ticketArray[3]} `;
 cardCode.innerHTML = `#${Math.floor(Math.random()*99999)}`                     
 
