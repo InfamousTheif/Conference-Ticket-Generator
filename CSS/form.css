@@ -1,0 +1,249 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img, picture, svg, video {
+  display: block;
+  max-width: 100%;
+}
+
+input, textarea, button, select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --grey1: hsl(252, 6%, 83%);
+  --grey2: hsl(245, 15%, 58%);
+  --grey3: hsl(245, 19%, 35%);
+  --purple: hsl(248, 70%, 10%);
+  --orange1: hsl(7, 88%, 67%);
+  --orange2: hsl(7, 71%, 60%);
+
+  --gradient1: hsl(7, 86%, 67%) to hsl(0, 0%, 100%);
+
+  --fs-1: 1.2rem;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inconsolata';
+  font-weight: 200 900; 
+  src: url(/assets/fonts/Inconsolata-VariableFont_wdth\,wght.woff2) format('woff2');
+}
+
+html, body { min-height: 100%; }
+
+body {
+  background-image: url(/assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg), url(/assets/images/pattern-lines.svg), url(/assets/images/pattern-squiggly-line-top.svg), url(/assets/images/background-mobile.png);
+  background-size: 60%, cover, 30%, cover;
+  background-repeat: no-repeat,repeat, no-repeat, no-repeat;
+  background-position: bottom -45px left, top, top 10px right, top;
+  
+  padding-bottom: 20px;
+  color: var(--white);
+  font-family: Inconsolata, consolas, sans-serif;
+}
+
+.head, .sub-head {
+  text-align: center;
+}
+
+.head {
+  font-size: 2rem;
+}
+
+.sub-head {
+  font-weight: 400;
+  color: var(--grey1);
+  margin-bottom: 20px;
+}
+ 
+.form-section {
+  display: block;
+}
+
+.logo {
+  margin-top: 40px;
+  width: 10rem;
+}
+
+.form-section-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Login form */
+
+.generator-form {
+  width: 93%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.imageUploader-wrapper > h3 , label {
+  font-weight: 500;
+}
+
+.generator-form > label {
+  font-size: var(--fs-1);
+}
+
+.text-input {
+  height: 50px;
+  border: solid 1px var(--grey2);
+  border-radius: 15px;
+  padding: 0.8rem 1.4rem;
+  color: var(--white);
+  background-color: hsla(252, 6%, 83%, 0.068);
+}
+
+.text-input::placeholder {
+  color: var(--grey1);
+}
+
+.text-input:focus, .dragArea:focus, .generate-button:focus {
+  outline: solid 1px var(--grey2);
+  outline-offset: 2px;
+}
+
+.text-input:hover, .dragArea:hover {
+  background-color: hsla(252, 6%, 83%, 0.404);
+}
+
+.generate-button {
+  height: 50px;  
+  margin-top: 10px;
+  margin-bottom: 40px;
+  border: none;
+  border-radius: 15px;
+  padding: 0.8rem 1.4rem;
+  color: var(--purple);
+  background-color: var(--orange1);
+  font-weight: 800;
+  font-size: var(--fs-1);
+}
+
+.generate-button:hover {
+  background-color: hsl(7, 79%, 58%);
+}
+
+/* image input area */
+
+.imageUploader-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.dragArea {
+  position: relative;
+  background-color: hsla(252, 6%, 83%, 0.068);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border: dashed 1px var(--grey2);
+  border-radius: 15px;
+  padding: 0.8rem 1.2rem;
+}
+
+.dragArea > p {
+  width: fit-content;
+}
+
+.output-imgArea, .complete-buttons-wrapper > button, #change-button + label {
+  color: white;       
+  background-color: hsla(252, 6%, 83%, 0.24);
+  padding: 0.4rem 0.4rem;
+  border: solid 1px var(--grey2);
+  border-radius: 10px;
+}
+
+.complete-buttons-wrapper {
+  display: none;
+}
+
+.complete-buttons-wrapper > button:hover, #change-button:hover + label {
+  color: var(--grey1);
+  text-decoration: underline;
+}
+
+#fileUploader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+}
+
+#change-button {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.img-requirements, .img-error, .username-error, .email-error, .gituser-error {
+  display: flex;
+  align-items: center;  
+  font-size: 11px;
+  gap: 0.6rem;
+  color: var(--grey1);
+  margin-bottom: 5px;
+}
+
+.img-error, .username-error, .email-error, .gituser-error {
+  color: var(--orange2);
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+@media screen and (width > 622px) {
+  .head {
+    font-size: 2.2rem;
+  }
+  
+  .sub-head {
+    font-size: 1.6rem;
+  }  
+}
+
+@media screen and (width > 700px) {
+  .head {
+    font-size: 3rem;
+    max-width: 700px;
+  }
+
+  .generator-form {
+    max-width: 500px;
+  }
+}
+
+@media screen and (width > 1024px){
+  body {
+    background-image: url(/assets/images/pattern-squiggly-line-bottom-desktop.svg), url(/assets/images/pattern-lines.svg), url(/assets/images/pattern-squiggly-line-top.svg), url(/assets/images/background-desktop.png);
+    background-size: 60%,cover, 30%, cover;
+    background-repeat: no-repeat,repeat, no-repeat, no-repeat;
+    background-position: bottom  left, top, top 30px right, top;
+  }
+}
