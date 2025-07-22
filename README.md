@@ -44,8 +44,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Live site]([https://your-live-site-url.com](https://infamoustheif.github.io/Conference-Ticket-Generator/))
+- Solution URL: [GitHub solution site](https://github.com/InfamousTheif/Conference-Ticket-Generator/tree/main)
+- Live Site URL: [GitHub live site](https://infamoustheif.github.io/Conference-Ticket-Generator/)
 
 ## My process
 I roughly finished the HTML and CSS of both pages, before starting with the JS part of this project. After I was done with the JS on each page, I polished the CSS a bit and made my JS code more readable by adding comments and the likes.
