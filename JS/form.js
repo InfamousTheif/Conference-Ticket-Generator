@@ -115,8 +115,9 @@ function inputErrorHandler(selector, errSelector){
 }
 
 function generateHandler(){
+  const regexPattern = /^.+@.+/;
   GenButton.addEventListener('click', () => {
-    if(!uEmail.value){
+    if(!uEmail.value || !regexPattern.test(uEmail.value)){
       inputErrorHandler(uEmail, emailError)
       return
     }
